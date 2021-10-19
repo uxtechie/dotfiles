@@ -1,18 +1,7 @@
  ~/.dotfiles
 ===============================
-# More information at [drasite.com/dotfiles](https://drasite.com/dotfiles)
+# More information at my [ZSH DevOps shell post](https://dev.to/sinhouse/ponle-vitaminas-a-tu-shell-en-ubuntu-o-windows-3deo-temp-slug-4102694?preview=6740bf81cb4d38b54c0e2e7f5a83e465036622dc5407a8314a3dd5d3257d175788f28ec0b716ed2b96f08c959326f32bd5c68d939d5b4ad6a93917bc)
   
-Bear in mind that I use this repository to save my own configuration files, and some of them might not work out of the box for you. If you want a guide about how to customize your terminal on your taste, you can follow this post:  
-# Post about terminal customizations: [drasite.com/blog/Pimp my terminal](https://drasite.com/blog/Pimp%20my%20terminal)
-
-<p align="center">
-  <a href="https://drasite.com/blog/Pimp%20my%20terminal">
-    <img alt="Pimp my terminal post" src="https://raw.githubusercontent.com/daniruiz/dotfiles/master/Screenshots/pimp-my-term.png">
-  </a>
-</p>
 <p align="center">
   <img alt="terminal preview" src="https://raw.githubusercontent.com/daniruiz/dotfiles/master/Screenshots/terminal.png">
-</p>
-<p align="center">
-  <img alt="dotfiles tree" src="https://raw.githubusercontent.com/daniruiz/dotfiles/master/Screenshots/tree.png">
 </p>

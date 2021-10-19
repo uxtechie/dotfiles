@@ -1,19 +1,52 @@
-[user]
-	email = 
-	name = 
-
-[color]
-	diff = auto
-	status = auto
-	branch = auto
-	interactive = auto
-	ui = true
-	pager = true
-[credential]
-	helper = cache --timeout=3600
-[pull]
-	rebase = true
 [core]
-	attributesfile = ~/.gitattributes
+	# Windows: true, Linux/Mac: input
+  autocrlf = input
+  editor = code --wait --new-window
+  attributesfile = ~/.gitattributes
+  excludesFile = ~/.gitignore_global
+
 [diff "image"]
 	command = compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title \"$1\" -
+	
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --new-window --diff $LOCAL $REMOTE
+
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait --new-window $MERGED
+	keepBackup = false
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[push]
+	default = simple
+
+[user]
+	name = 
+	email = 
+
+[credential] # cache credentials
+  helper = cache --timeout=3600
+
+[alias]
+	co = checkout
+	br = branch -v
+	ci = commit
+	st = status
+	df = difftool
+
+  solve = mergetool
+
+  cm = !git add . && git commit -a
+  amend = commit -a --amend
+
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
