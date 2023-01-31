@@ -7,11 +7,11 @@
 
 [diff "image"]
 	command = compare $2 $1 png:- | montage -geometry +4+4 $2 - $1 png:- | display -title \"$1\" -
-	
+
 [diff]
   tool = vscode
 [difftool "vscode"]
-  cmd = code --wait --new-window --diff $LOCAL $REMOTE
+  cmd = code --wait --diff $LOCAL $REMOTE
 
 [merge]
   tool = vscode
@@ -30,23 +30,20 @@
 [push]
 	default = simple
 
+[gitflow "prefix"]
+  feature = feature/
+  release = release/
+  hotfix = hotfix/
+  bugfix = bugfix/
+  support = support/
+  versiontag = v
+
+[tag]
+	sort = -version:refname
+
 [user]
-	name = 
-	email = 
+	name =
+	email =
 
 [credential] # cache credentials
   helper = cache --timeout=3600
-
-[alias]
-	co = checkout
-	br = branch -v
-	ci = commit
-	st = status
-	df = difftool
-
-  solve = mergetool
-
-  cm = !git add . && git commit -a
-  amend = commit -a --amend
-
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
